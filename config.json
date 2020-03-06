@@ -1,0 +1,40 @@
+{
+    "inbounds": [
+        {
+            "port": v2ray_port,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "backend_uuid",
+                        "alterId": 64
+                    }
+                ]
+            }
+        },
+        {
+            "port": 8188,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "frontend_uuid",
+                        "alterId": 64
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "wsSettings": {
+                    "path": "/v2ray_path"
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {}
+        }
+    ]
+}
